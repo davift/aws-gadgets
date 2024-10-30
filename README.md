@@ -13,7 +13,7 @@ This is my ground dump for my gadgets to speed up troubleshooting on AWS.
 Usage:
 
 ```
-activity.py <username> <hours>
+activity.py <username/role_arn> <hours>
 ```
 
 Example:
