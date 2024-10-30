@@ -8,6 +8,7 @@ This is my ground dump for my gadgets to speed up troubleshooting on AWS.
   - This script collects activities for a specific AIM User for granter and denied permissions.
   - The value of this information is to appropriately grant only the bare minimum permissions and revoke the unnecessary ones.
     - Dependencies: `boto3` (required) and `tabulate` (optional with easy code changes)
+    - To analyze roles' activities, change the flag inside the code.
 
 Usage:
 
