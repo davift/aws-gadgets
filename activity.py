@@ -4,8 +4,10 @@ import json
 import sys
 from tabulate import tabulate
 
-username=sys.argv[1]
-window=sys.argv[2]
+# Setting to false will look for roles activities
+is_username = True
+username_or_role = sys.argv[1]
+window = sys.argv[2]
 
 blue='\033[94m'
 green='\033[92m'
@@ -22,8 +24,8 @@ next_token = None
 params = {
     'LookupAttributes': [
         {
-            'AttributeKey': 'Username',
-            'AttributeValue': username
+            'AttributeKey': 'Username' if is_username == True else 'ResourceName',
+            'AttributeValue': username_or_role
         },
     ],
     'StartTime': datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=int(window)),
@@ -60,7 +62,7 @@ else:
             grants.append(log_data['eventName'])
 
 print('')
-print('User:', username)
+print('User/Role:', username_or_role)
 print('Activity: last', window, 'hours')
 print('')
 print(tabulate([["Total events found", blue + str(len(events)) + reset], ["Events with errors", red + str(len(errors)) + reset], ["Events with grants", green + str(len(grants)) + reset]], tablefmt="simple"))
