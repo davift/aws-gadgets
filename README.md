@@ -4,7 +4,7 @@ This is my ground dump for my gadgets to speed up troubleshooting on AWS.
 
 ## Gadgets
 
-- `permission-activity.py`
+- `activity.py`
   - This script collects activities for a specific AIM User for granter and denied permissions.
   - The value of this information is to appropriately grant only the bare minimum permissions and revoke the unnecessary ones.
     - Dependencies: `boto3` (required) and `tabulate` (optional with easy code changes)
@@ -12,13 +12,13 @@ This is my ground dump for my gadgets to speed up troubleshooting on AWS.
 Usage:
 
 ```
-permission-activity.py <username> <hours>
+activity.py <username> <hours>
 ```
 
 Example:
 
 ```
-permission-activity.py AppUser 3
+activity.py AppUser 3
 ```
 
 Output:
