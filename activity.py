@@ -4,9 +4,11 @@ import json
 import sys
 from tabulate import tabulate
 
-# Setting to false will look for roles activities
-is_username = True
 username_or_role = sys.argv[1]
+if not username_or_role.startswith('arn:aws:'):
+    is_username = True
+else:
+    is_username = False
 window = sys.argv[2]
 
 blue='\033[94m'
