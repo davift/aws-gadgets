@@ -28,6 +28,8 @@ Output:
 
 ![Output_No_Events](https://github.com/davift/aws-gadgets/blob/main/output_02.png)
 
+Show related ARNs or hit Ender to exit:
+
 ![Output_No_Events](https://github.com/davift/aws-gadgets/blob/main/output_03.png)
 
 
