@@ -32,4 +32,6 @@ Show related ARNs or hit Ender to exit:
 
 ![Output_No_Events](https://github.com/davift/aws-gadgets/blob/main/output_03.png)
 
+## Notes
 
+Feel free to report bugs, suggest features, and contribute to the code.
