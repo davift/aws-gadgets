@@ -5,21 +5,24 @@ This is my ground dump for my gadgets to speed up troubleshooting on AWS.
 ## Gadgets
 
 - `activity.py`
-  - This script collects activities for a specific AIM User for granter and denied permissions.
+  - This script collects activities for a specific AIM User / Role for granter and denied permissions.
   - The value of this information is to appropriately grant only the bare minimum permissions and revoke the unnecessary ones.
     - Dependencies: `boto3` (required), `re` (required), and `tabulate` (optional with easy code changes)
-    - To analyze roles' activities, change the flag inside the code.
 
 Usage:
 
 ```
-activity.py <username/role_arn> <hours>
+python3 activity.py <username/role_arn> <hours>
 ```
 
 Example:
 
 ```
-activity.py AppUser 3
+python3 activity.py AppUser 3
+```
+
+```
+python3 activity.py arn:aws:iam::accountId:role/roleName 24
 ```
 
 Output:
